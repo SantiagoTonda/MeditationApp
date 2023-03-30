@@ -21,7 +21,9 @@ const app = () => {
         sound.addEventListener('click', function () {
             song.src = this.getAttribute('data-sound');
             video.src = this.getAttribute('data-video');
+            outline.style.stroke = this.getAttribute("data-stroke")
             checkPlaying(song);
+            // play.src = './svg/play.svg';
         })
     })
 

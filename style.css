@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
 }
 
 .app {
@@ -11,7 +12,10 @@
     align-items: center;
 }
 
-.time-select, .sound-picker, .player-container {
+
+.time-select,
+.sound-picker,
+.player-container {
     height: 80%;
     flex: 1;
     display: flex;
@@ -37,18 +41,21 @@
     position: absolute;
     bottom: 10%;
     color: white;
-    font-size: 50px;
+    font-size: 70px;
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.7);
 }
 
 video {
     position: fixed;
     top: 0%;
     left: 0%;
-    width: 100%;
     z-index: -10;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
-.time-select button, .sound-picker button {
+.time-select button,
+.sound-picker button {
     color: white;
     width: 30%;
     height: 10%;
@@ -73,14 +80,40 @@ video {
     padding: 30px;
 }
 
-.sound-picker button:nth-child(1){
+.sound-picker button:nth-child(1) {
     background: #4972a1;
 }
 
-.sound-picker button:nth-child(2){
+.sound-picker button:nth-child(2) {
     background: #a14f49;
 }
 
 .sound-picker button img {
     height: 100%;
+}
+
+@media (max-width: 768px) {
+    .app {
+        flex-direction: column-reverse;
+    }
+
+    .time-select,
+    .sound-picker,
+    .player-container {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .time-select button {
+        height: 20%;
+        font-size: 15px;
+    }
+
+    .time-display {
+        bottom: -70px;
+    }
+
+    .player-container svg {
+        height: 80%;
+    }
 }
