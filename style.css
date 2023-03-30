@@ -40,6 +40,7 @@
 
 .play {
     filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.4));
+    cursor: pointer;
 }
 
 .time-display {
@@ -89,15 +90,23 @@ video {
     background: #4972a1;
 }
 
+.sound-picker button:nth-child(1):hover {
+    background-color: #6e94c0;
+}
+
 .sound-picker button:nth-child(2) {
     background: #a14f49;
+}
+
+.sound-picker button:nth-child(2):hover {
+    background: #cd7b75;
 }
 
 .sound-picker button img {
     height: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 912px) {
     .app {
         flex-direction: column-reverse;
     }
