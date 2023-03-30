@@ -42,6 +42,7 @@ const app = () => {
                 seconds = '0' + seconds;
             }
             timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${seconds}`;
+            song.currentTime = 0;
         });
     });
 
@@ -83,5 +84,14 @@ const app = () => {
         }
     }
 };
+
+/*
+Agregar más videos y sonidos (fogata, espacio, viento, etc)
+Cambiar los videos por unos de mejor calidad
+Modificar función para que no se resetee el timer y el audio cuando se cambia de video
+Agregar pointer al botón de play
+Ver de sacar espacios blancos en el circle-progress
+Agregar media query para cambiar tamaños en tablet
+*/
 
 app();
