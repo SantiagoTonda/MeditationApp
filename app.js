@@ -99,14 +99,12 @@ const app = () => {
 };
 
 /*
-Agregar más videos y sonidos (fogata, espacio, viento, etc)
+Agregar más videos y sonidos (fogata, espacio, viento, cascada, etc)
 Cambiar los videos por unos de mejor calidad
 Modificar función para que no se resetee el timer y el audio cuando se cambia de video
-Que quede resaltado el botón de time-select que esté seleccionado
 Agregar media query para cambiar tamaños en tablet
 Agregar media query para cuando se rota la pantalla en celu
 Por qué en mi celu se ve el video en negro al principio?
-Hacer función para subir y bajar volumen?
 */
 
 app();

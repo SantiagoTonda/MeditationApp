@@ -137,4 +137,8 @@ video {
     .player-container svg {
         height: 80%;
     }
+
+    video {
+        max-height: 100vh;
+    }
 }
