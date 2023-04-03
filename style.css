@@ -73,9 +73,14 @@ video {
     transition: all 0.5s ease;
 }
 
-.time-select button:hover {
+.time-select button:first-child{
+    background-color: white;
     color: black;
-    background: white;
+}
+
+.time-select button:hover {
+    color: black !important;
+    background: white !important;
 }
 
 .sound-picker button {
@@ -86,24 +91,26 @@ video {
     padding: 30px;
 }
 
-.sound-picker button:nth-child(1) {
-    background: #4972a1;
+.sound-picker button img {
+    height: 100%;
 }
 
-.sound-picker button:nth-child(1):hover {
-    background-color: #6e94c0;
+.sound-picker button:nth-child(1) {
+    background: #4972a1;
 }
 
 .sound-picker button:nth-child(2) {
     background: #a14f49;
 }
 
-.sound-picker button:nth-child(2):hover {
-    background: #cd7b75;
-}
+@media (min-width: 913px) {
+    .sound-picker button:nth-child(2):hover {
+        background-color: #cd7b75;
+    }
 
-.sound-picker button img {
-    height: 100%;
+    .sound-picker button:nth-child(1):hover {
+        background-color: #6e94c0;
+    }
 }
 
 @media (max-width: 912px) {

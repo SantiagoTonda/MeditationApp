@@ -11,7 +11,14 @@ const app = () => {
     //Get the length of the outline
     const outlineLength = outline.getTotalLength();
     //Duration
-    let fakeDuration = 600;
+    let fakeDuration = 300;
+    let minutes = Math.floor(fakeDuration / 60);
+    let seconds = Math.floor(fakeDuration % 60);
+    if (seconds < 10) {
+        seconds = "0" + seconds;
+    }
+
+    timeDisplay.textContent = `${minutes}:${seconds}`;
 
     outline.style.strokeDasharray = outlineLength;
     outline.style.strokeDashoffset = outlineLength;
@@ -43,6 +50,12 @@ const app = () => {
             }
             timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${seconds}`;
             song.currentTime = 0;
+            timeSelect.forEach(option => {
+                option.style.background = "none";
+                option.style.color = "white";
+            })
+            option.style.background = "white";
+            option.style.color = "black";
         });
     });
 
@@ -93,6 +106,7 @@ Que quede resaltado el botón de time-select que esté seleccionado
 Agregar media query para cambiar tamaños en tablet
 Agregar media query para cuando se rota la pantalla en celu
 Por qué en mi celu se ve el video en negro al principio?
+Hacer función para subir y bajar volumen?
 */
 
 app();
